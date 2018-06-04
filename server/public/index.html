@@ -1,44 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="vendors/angular.min.js"></script>
+    <meta charset="utf-8">
+    <title>Code Challenge 4: Angular</title>
+    <script src="vendor/angular.min.js"></script>
+    <script src="scripts/data.js"></script>
     <script src="scripts/client.js"></script>
-    <link rel="stylesheet" href="vendors/bootstrap.min.css">
-    <title>MEAN Stack Synthesis</title>
+    <link rel="stylesheet" href="/styles/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Satisfy" rel="stylesheet">
 </head>
-<body>
-    <h1>MEAN Stack Synthesis</h1>
-    <div ng-app="myApp">
-        <div ng-controller="GarageController as GC" class="container"> 
-            <h2>New Car:</h2>
-            <div id="input">
-                <input type="number" placeholder="year" ng-model="GC.yearIn">
-                <input type="text" placeholder="make" ng-model="GC.makeIn">
-                <input type="text" placeholder="model" ng-model="GC.modelIn">
-                <input type="number" placeholder="odometer" ng-model="GC.odometerIn">
-                <button ng-click="GC.addCar()">Add Car</button>
+
+<body ng-app="StudentApp">
+    <div ng-controller="StudentController as SC">
+        <div class="container">
+            <header ng-model="SC.classList">
+                <h1 class="text-center">Class list!</h1>
+            </header>
+            <div class="text-center">
+                <!-- On button click, display list of students -->
+                <button class="btn" ng-click="SC.addClassList()">Display Students</button>
             </div>
-            <div id="output">
-                <h2>Cars In Garage:</h2>
-                <div class="row">
-                    <div class="col-4" ng-repeat="car in GC.cars">
-                        <div class="card">
-                            <div class="card-header"><h3>{{ car.model }}</h3></div>
-                            <div class="card-body">
-                                <p>{{ car.year }} {{ car.make }}</p>
-                                <p>Miles: {{ car.odometer }}</p>
-                            </div> 
-                            <div class="card-footer">
-                                <button class="btn btn-primary btn-block" ng-click="GC.sellMe( $index )">Sell</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div ng-repeat="list in SC.studentList">
+                <li>{{classList.list}}</li>
             </div>
+            <footer>
+                <p class="text-center">Comparison is the thief of joy</p>
         </div>
+        </footer>
     </div>
 </body>
+
 </html>

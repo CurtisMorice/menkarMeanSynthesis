@@ -1,0 +1,20 @@
+let studentList = [
+    'Atticus',
+    'Blake',
+    'Brittany',
+    'David',
+    'Ian',
+    'Jonathan',
+    'Joshua',
+    'Justin',
+    'Kam',
+    'Kerry',
+    'Melody',
+    'Sam',
+    'Sarah',
+    'Steven',
+    'Stephen',
+    'Teagan',
+    'Tenzin',
+    'Ty'
+];
